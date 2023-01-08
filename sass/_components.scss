@@ -116,6 +116,47 @@
     }
 }
 
+// BOOKMARK
+.bookmark {
+    position: relative;
+}
+
+.bookmark:hover .bookmark-active {
+    display: block;
+}
+
+.bookmark-active {
+    position: absolute;
+    top: 7rem;
+    left: -10rem;
+    background-color: var(--color-grey-light-1);
+    z-index: 20;
+    display: none;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+        transition: all 0.2s;
+
+        &:hover {
+            background-color: var(--color-grey-dark-3);
+            color: #fff;
+        }
+    }
+
+    &__img {
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: 50%;
+    }
+
+    &__text {
+        margin-left: 2rem;
+        white-space: nowrap;
+    }
+}
+
 // SIDEBAR
 
 .side-nav {

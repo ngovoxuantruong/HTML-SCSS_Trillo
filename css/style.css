@@ -115,6 +115,35 @@ body {
     border-radius: 50%;
     margin-right: 1rem; }
 
+.bookmark {
+  position: relative; }
+
+.bookmark:hover .bookmark-active {
+  display: block; }
+
+.bookmark-active {
+  position: absolute;
+  top: 7rem;
+  left: -10rem;
+  background-color: var(--color-grey-light-1);
+  z-index: 20;
+  display: none; }
+  .bookmark-active__link {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    transition: all 0.2s; }
+    .bookmark-active__link:hover {
+      background-color: var(--color-grey-dark-3);
+      color: #fff; }
+  .bookmark-active__img {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%; }
+  .bookmark-active__text {
+    margin-left: 2rem;
+    white-space: nowrap; }
+
 .side-nav {
   font-size: 1.4rem;
   list-style: none;
