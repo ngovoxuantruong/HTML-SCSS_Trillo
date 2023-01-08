@@ -13,6 +13,12 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: $bg-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
+
     position: relative;
     &__input {
         font-family: inherit;
@@ -178,6 +184,13 @@
             justify-content: center;
             padding: 2rem;
         }
+
+        @media only screen and (max-width: $bg-small) {
+            flex-direction: column;
+            margin-bottom: 0.7rem;
+            width: 1.5;
+            height: 1.5;
+        }
     }
 
     &__icon {
@@ -185,6 +198,11 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+
+        @media only screen and (max-width: $bg-small) {
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -205,9 +223,6 @@
 .gallery {
     display: flex;
 
-    &__item {
-    }
-
     &__photo {
         width: 100%;
         display: block;
@@ -227,6 +242,11 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bg-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
     }
 
     &__stars {
@@ -260,17 +280,29 @@
 
         @include flexCenter;
         flex-direction: column;
+
+        @media only screen and (max-width: $bg-small) {
+            padding: 0 1.5rem;
+        }
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $bg-small) {
+            font-size: 1.8rem;
+        }
     }
 
     &__rating-count {
         font-size: 0.8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $bg-small) {
+            font-size: 0.5rem;
+        }
     }
 }
 
